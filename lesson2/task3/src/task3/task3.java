@@ -4,7 +4,7 @@ import task3.ProductPart;
 import task3.Product;
 import task3.LineStep;
 
-public class Task3 {
+public class task3 {
 
 	public static void main(String[] args) {
 		ILineStep lineS = new LineStep();
