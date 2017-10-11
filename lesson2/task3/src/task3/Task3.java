@@ -1,8 +1,11 @@
 package task3;
+
 import task3.ProductPart;
 import task3.Product;
-public class task3  {
-	
+import task3.LineStep;
+
+public class Task3 {
+
 	public static void main(String[] args) {
 		ILineStep lineS = new LineStep();
 		IProductPart body = lineS.buildProductPart();
@@ -21,8 +24,5 @@ public class task3  {
 		System.out.println("Product name: " + ((Product) laptop).getName());
 
 	}
-
-	
-	
 
 }
