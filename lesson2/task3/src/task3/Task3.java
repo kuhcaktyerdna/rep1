@@ -14,7 +14,7 @@ public class Task3 {
 		ILineStep monitorLineStep = new MonitorLineStep();
 		IProduct laptop = new Product(body, monitor, motherboard);
 		System.out.println("Product scheme was created.");
-		IAssemblyLine assemblyLine = new AssemblyLine(bodyLineStep, motherboardLineStep, monitorLineStep, laptop);
+		IAssemblyLine assemblyLine = new AssemblyLine(bodyLineStep, motherboardLineStep, monitorLineStep);
 		laptop = assemblyLine.assembleProduct(laptop);
 
 	}
