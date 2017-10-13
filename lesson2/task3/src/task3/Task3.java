@@ -8,16 +8,13 @@ public class Task3 {
 		IProductPart motherboard = new Motherboard("Motherboard");
 		System.out.println("Motherboard scheme was created. ");
 		IProductPart monitor = new Monitor("Monitor");
-		System.out.println("Monitor scheme was created. \n");
+		System.out.println("Monitor scheme was created.");
 		ILineStep bodyLineStep = new BodyLineStep();
 		ILineStep motherboardLineStep = new MotherboardLineStep();
 		ILineStep monitorLineStep = new MonitorLineStep();
-		body = bodyLineStep.buildProductPart();
-		motherboard = motherboardLineStep.buildProductPart();
-		monitor = monitorLineStep.buildProductPart();
 		IProduct laptop = new Product(body, monitor, motherboard);
 		System.out.println("Product scheme was created.");
-		IAssemblyLine assemblyLine = new AssemblyLine(laptop);
+		IAssemblyLine assemblyLine = new AssemblyLine(bodyLineStep, motherboardLineStep, monitorLineStep, laptop);
 		laptop = assemblyLine.assembleProduct(laptop);
 
 	}

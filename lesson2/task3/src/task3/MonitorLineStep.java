@@ -6,7 +6,7 @@ public class MonitorLineStep implements ILineStep {
 	public IProductPart buildProductPart() {
 		String name = "Monitor";
 		IProductPart monitor = new Monitor(name);
-		System.out.println(name+ " was built. \n");
+		System.out.println(name+ " was built. ");
 		return monitor;
 	}
 }
