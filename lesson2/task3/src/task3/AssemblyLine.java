@@ -2,16 +2,14 @@ package task3;
 
 public class AssemblyLine implements IAssemblyLine {
 
-	IProductPart body;
-	IProductPart monitor;
-	IProductPart motherboard;
+
 	ILineStep bodyLineStep;
 	ILineStep motherboardLineStep;
 	ILineStep monitorLineStep;
 	
 	
 	
-	public AssemblyLine(ILineStep bodyLineStep, ILineStep motherboardLineStep, ILineStep monitorLineStep, IProduct product) {
+	public AssemblyLine(ILineStep bodyLineStep, ILineStep motherboardLineStep, ILineStep monitorLineStep) {
 		this.bodyLineStep=bodyLineStep;
 		this.motherboardLineStep= motherboardLineStep;
 		this.monitorLineStep=monitorLineStep;
