@@ -4,7 +4,20 @@ public class SoftwareFirm {
 
     private Employee developmentDepartment[];
     private String name;
+    private int salary;
+    private int members;
 
+    public SoftwareFirm(int num){
+        developmentDepartment = new Employee[num];
+        members = 0;
+    }
+    
+    public Employee[] addToDepartment(Employee employee){
+        developmentDepartment[members]=employee;
+        members++;
+        return developmentDepartment;
+    }
+    
     public String getName() {
         return name;
     }
@@ -13,20 +26,18 @@ public class SoftwareFirm {
         this.name = name;
     }
 
-    public Employee[] createDepartment(int n, Employee[] developmentDepartment) {
-        developmentDepartment = fillDepartment(n, developmentDepartment);
-        return developmentDepartment;
-    }
-
-    private Employee[] fillDepartment(int n, Employee[] employees) {
-        Employee[] developmentDepartment = new Employee[n];
-        System.arraycopy(employees, 0, developmentDepartment, 0, employees.length);
-        Printer.print("Development department was created and includes: ");
-        for (int i = 0; i < developmentDepartment.length - 1; i++) {
-            Printer.print(developmentDepartment[i].getName() + ", ");
-        }
+    
+    public  void showDepartmentSalary(Employee[] employeesList){
+        Printer.print("Summary salary is (in $): "+countSalary(employeesList));
         
-        return developmentDepartment;
+    }
+    
+    private int countSalary(Employee[] employeesList){
+        salary = 0;
+        for(int i=0; i<employeesList.length;i++){
+            salary += employeesList[i].getSalary();
+        }
+        return salary;
     }
 
 }

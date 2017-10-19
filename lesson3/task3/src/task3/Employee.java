@@ -28,6 +28,7 @@ public abstract class Employee {
 	public void setRank(String rank) {
 		this.rank=rank;
 	}
+        
 
 
     public String getName() {
