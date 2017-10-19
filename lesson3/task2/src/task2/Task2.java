@@ -8,11 +8,9 @@ public class Task2 {
         firstNum= numGen.generateRandomNumber();
         secondNum= numGen.generateRandomNumber();
         thirdNum= numGen.generateRandomNumber();
-        IntToStringConverter iToS = new IntToStringConverter();
-        String combinatedNumber = iToS.convertToString(firstNum, secondNum);
-        StringToIntConverter sToI = new StringToIntConverter();
-        int firstAndSecondNum = sToI.convertToInt(combinatedNumber);
-        System.out.println(combinatedNumber+" - "+thirdNum+" = "+(firstAndSecondNum-thirdNum));
+        NumberConnecter numCon = new NumberConnecter();
+        int newNum = numCon.connectNumber(firstNum, secondNum);
+        Printer.print(newNum+" - "+thirdNum+" = "+(newNum-thirdNum));
     }
 }
         
