@@ -20,14 +20,14 @@ public class Task3 {
         tester.setRank("Middle");
         SoftwareFirm softFirm = new SoftwareFirm(5);
         softFirm.setName("Firm name");
-        Employee[] employees = {relManager, dev, prodManager, progManager, tester,};
-        employees = softFirm.addToDepartment(tester);
-        employees = softFirm.addToDepartment(dev);
-        employees = softFirm.addToDepartment(prodManager);
-        employees = softFirm.addToDepartment(progManager);
-        employees = softFirm.addToDepartment(relManager);
-        Printer.print(employees.length);
-        Printer.print("There are "+employees.length+" members in department: "+tester.getName()+", "+dev.getName()+", "+prodManager.getName()+", "+progManager.getName()+", "+relManager.getName()+". ");
+        Employee[] department = {relManager, dev, prodManager, progManager, tester,};
+        department = softFirm.addToDepartment(tester);
+        department = softFirm.addToDepartment(dev);
+        department = softFirm.addToDepartment(prodManager);
+        department = softFirm.addToDepartment(progManager);
+        department = softFirm.addToDepartment(relManager);
+        Printer.print("There are "+department.length+" members in department: "+tester.getName()+", "+dev.getName()+", "+prodManager.getName()+", "+progManager.getName()+", "+relManager.getName()+". ");
+        softFirm.showDepartmentSalary(department);
     }
 
 }
