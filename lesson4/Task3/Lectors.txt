@@ -1,4 +1,0 @@
-aLector2
-2
-qLector1
-1
