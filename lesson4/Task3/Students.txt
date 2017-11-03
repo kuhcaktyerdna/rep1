@@ -1,6 +1,6 @@
 AStudent1.10
 1000
-Bstudent1.9
+Bstudent 1.9
 900
 CStudent1.8
 800
